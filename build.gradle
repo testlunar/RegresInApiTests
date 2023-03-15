@@ -51,3 +51,15 @@ tasks.withType(Test) {
         }
     }
 }
+
+task positive_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("Positive")
+    }
+}
+
+task negative_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("Negative")
+    }
+}

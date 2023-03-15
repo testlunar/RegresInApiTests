@@ -9,22 +9,20 @@ import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
 import static io.restassured.http.ContentType.JSON;
-import static org.hamcrest.Matchers.notNullValue;
+import static specs.Data.BASE_URL;
 
-public class LoginSpecs {
-    public static RequestSpecification loginRequestSpec = with()
+public class Specifications {
+    public static RequestSpecification requestSpec = with()
             .log().uri()
             .log().headers()
             .log().body()
             .filter(withCustomTemplates())
             .contentType(JSON)
-            .baseUri("https://reqres.in")
+            .baseUri(BASE_URL)
             .basePath("/api");
 
-    public static ResponseSpecification loginResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
-            .expectStatusCode(200)
-            .expectBody("token", notNullValue())
             .build();
 }

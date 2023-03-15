@@ -1,4 +1,4 @@
-package lombok.updateUser;
+package lombokModels.updateUser;
 
 import lombok.Data;
 

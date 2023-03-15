@@ -1,17 +1,17 @@
 package tests;
 
-import models.lombok.createUser.CreateUserBody;
-import models.lombok.createUser.CreateUserResponse;
-import models.lombok.login.LoginBodyLombokModel;
-import models.lombok.login.LoginResponseLombokModel;
-import models.lombok.singleUserSearch.SingleUserResponse;
-import models.lombok.updateUser.UpdateUserBody;
-import models.lombok.updateUser.UpdateUserResponce;
+import lombok.createUser.CreateUserBody;
+import lombok.createUser.CreateUserResponse;
+import lombok.login.LoginBodyLombokModel;
+import lombok.login.LoginResponseLombokModel;
+import lombok.singleUserSearch.SingleUserResponse;
+import lombok.updateUser.UpdateUserBody;
+import lombok.updateUser.UpdateUserResponce;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static specs.LoginSpecs.loginRequestSpec;
 import static specs.LoginSpecs.loginResponseSpec;
 
